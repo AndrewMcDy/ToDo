@@ -44,26 +44,29 @@
 
     function createTodoItem(name) {
         let item = document.createElement('li');
+        let textItem = document.createElement('div');
         let buttonGroup = document.createElement('div');
         let doneButton = document.createElement('button');
         let deleteButton = document.createElement('button');
 
         item.classList.add('list-group-item');
-        item.textContent = name;
-
+        textItem.classList.add('text-item');
         buttonGroup.classList.add('btn-group');
         doneButton.classList.add('btn', 'btn-success');
         doneButton.textContent = 'Готово';
         deleteButton.classList.add('btn', 'btn-danger');
         deleteButton.textContent = 'Видалити';
 
+        textItem.textContent = name;
+
         buttonGroup.append(doneButton);
         buttonGroup.append(deleteButton);
+        item.append(textItem);
         item.append(buttonGroup);
 
         // Тест обробників подій зразу, а не під кінець
-        doneButton.addEventListener('click', function () {
-            item.classList.toggle('list-group-item-success');
+        doneButton.addEventListener('click', function () {            
+            textItem.classList.toggle('text-item-success');
             
             if (localDoneIndex[localArray.indexOf(name)] === '0') {
                 localDoneIndex[localArray.indexOf(name)] = '1';
@@ -86,6 +89,7 @@
 
         return {
             item,
+            textItem,
             doneButton,
             deleteButton,
         };
@@ -109,8 +113,8 @@
             for (let i = 0; i < localArray.length; ++i) {
                 let localTodoItem = createTodoItem(localArray[i]);
                 todoList.append(localTodoItem.item);
-                if (localDoneIndex[i] === '1') {
-                    localTodoItem.item.classList.add('list-group-item-success');
+                if (localDoneIndex[i] === '1') {                    
+                    localTodoItem.textItem.classList.add('text-item-success');
                     localTodoItem.doneButton.textContent = 'Упс, ще раз виконати';
                 };
             };

@@ -92,6 +92,7 @@ h6 {
 h2 {
   display: inline-block;
   font-size: 54px;
+  font-weight: 700;
   color: #c4fa02;
 }
 
@@ -117,11 +118,13 @@ h2 {
 .btn {
   font-size: 24px;
   line-height: 28px;
+  font-weight: 700;
   background-color: #c4fa02;
-  color: #8511e4;
+  color: #dd11e4;
   padding: 20px;
   border-radius: 20px;
   transition: all 0.4s ease 0s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn:not([disabled]):hover {
@@ -149,23 +152,31 @@ h2 {
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 0 20px;
-  background: linear-gradient(70deg, #eee, #eee, #266575);
+}
+
+.text-item {
+  position: relative;
+  background-color: #eee;
+  border-radius: 20px;
+  flex: 1 1 75%;
+  padding: 10px 15px;
   border-radius: 20px;
   color: #266575;
-  font-size: 24px;
+  font-size: 28px;
+  background-color: #eee;
 }
 
-.list-group-item-success {
-  background: #266575;
+.text-item-success {
+  margin: 0 0 0 50px;
+  background-color: #266575;
   color: #c4fa02;
-  padding: 0 0 0 50px;
+  text-decoration: line-through;
 }
 
-.list-group-item-success::before {
+.text-item-success::before {
   content: "";
   position: absolute;
-  left: 15px;
+  left: -35px;
   top: 50%;
   width: 20px;
   height: 40px;
@@ -177,7 +188,7 @@ h2 {
 .btn-group {
   display: flex;
   gap: 10px;
-  background-color: #266575;
+
   border-radius: 20px;
   flex: 0 0 auto;
   align-self: stretch;
@@ -204,16 +215,26 @@ h2 {
 }
 
 @media (max-width: 800px) {
+  .container {
+    gap: 30px;
+  }
+  .input-group {
+    gap: 10px;
+  }
   .list-group-item {
     flex-direction: column;
-    background: #eee;
+    align-items: stretch;
+    gap: 10px;
   }
-  .list-group-item-success {
+  .text-item-success {
     background: #266575;
   }
   .btn-group {
     align-self: end;
     background: none;
+  }
+  .list-group {
+    gap: 20px;
   }
   h2 {
     font-size: 38px;
