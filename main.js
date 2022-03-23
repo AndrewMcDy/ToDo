@@ -17,7 +17,7 @@
         let buttonWrapper = document.createElement('div');
         let button = document.createElement('button');
 
-        form.classList.add('input-group', 'mb-3');
+        form.classList.add('input-group');
         input.classList.add('form-control');
         input.placeholder = 'Введіть назву нової справи';
         buttonWrapper.classList.add('input-group-append');
@@ -48,10 +48,10 @@
         let doneButton = document.createElement('button');
         let deleteButton = document.createElement('button');
 
-        item.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-item-center');
+        item.classList.add('list-group-item');
         item.textContent = name;
 
-        buttonGroup.classList.add('btn-group', 'btn-group-sm');
+        buttonGroup.classList.add('btn-group');
         doneButton.classList.add('btn', 'btn-success');
         doneButton.textContent = 'Готово';
         deleteButton.classList.add('btn', 'btn-danger');

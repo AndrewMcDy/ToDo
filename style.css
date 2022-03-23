@@ -1,0 +1,162 @@
+/*Null styles*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* Main styles */
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  background-color: #266575;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  display: inline-block;
+  font-size: 54px;
+  color: #c4fa02;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.form-control {
+  flex: 1 1 75%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #266575;
+  font-size: 24px;
+}
+
+.input-group-append {
+  flex: 0 0 auto;
+}
+
+.btn {
+  font-size: 24px;
+  line-height: 28px;
+  background-color: #c4fa02;
+  color: #8511e4;
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.4s ease 0s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.list-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: space-between;
+  gap: 10px;
+}
+
+.list-group-item {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 20px;
+  background: linear-gradient(to right, #fff, #fff, #266575);
+  border-radius: 20px;
+  color: #266575;
+  font-size: 24px;
+}
+
+.list-group-item-success {
+  background: #266575;
+  color: #c4fa02;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  background-color: #266575;
+  border-radius: 20px;
+}
