@@ -123,8 +123,13 @@ h2 {
   transition: all 0.4s ease 0s;
 }
 
-.btn:hover {
+.btn:not([disabled]):hover {
   transform: scale(1.1);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .list-group {
@@ -137,13 +142,14 @@ h2 {
 }
 
 .list-group-item {
+  position: relative;
   width: 100%;
   display: flex;
   gap: 20px;
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0 20px;
-  background: linear-gradient(to right, #fff, #fff, #266575);
+  background: linear-gradient(70deg, #fff, #fff, #266575);
   border-radius: 20px;
   color: #266575;
   font-size: 24px;
@@ -152,6 +158,19 @@ h2 {
 .list-group-item-success {
   background: #266575;
   color: #c4fa02;
+  padding: 0 0 0 50px;
+}
+
+.list-group-item-success::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  width: 20px;
+  height: 40px;
+  border-bottom: 5px solid #c4fa02;
+  border-right: 5px solid #c4fa02;
+  transform: translateY(-75%) rotate(45deg);
 }
 
 .btn-group {
@@ -159,4 +178,13 @@ h2 {
   gap: 10px;
   background-color: #266575;
   border-radius: 20px;
+  flex: 0 0 auto;
+}
+
+.btn-danger {
+  background: linear-gradient(70deg, #c4fa02, #c4fa02, #c4fa02, #fc0915);
+}
+
+.btn-success {
+  background: linear-gradient(70deg, #c4fa02, #c4fa02, #c4fa02, #29ac08);
 }
