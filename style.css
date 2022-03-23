@@ -107,6 +107,7 @@ h2 {
   border-radius: 20px;
   color: #266575;
   font-size: 24px;
+  background-color: #eee;
 }
 
 .input-group-append {
@@ -149,7 +150,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0 20px;
-  background: linear-gradient(70deg, #fff, #fff, #266575);
+  background: linear-gradient(70deg, #eee, #eee, #266575);
   border-radius: 20px;
   color: #266575;
   font-size: 24px;
@@ -179,6 +180,7 @@ h2 {
   background-color: #266575;
   border-radius: 20px;
   flex: 0 0 auto;
+  align-self: stretch;
 }
 
 .btn-danger {
@@ -187,4 +189,38 @@ h2 {
 
 .btn-success {
   background: linear-gradient(70deg, #c4fa02, #c4fa02, #c4fa02, #29ac08);
+}
+
+@media (max-width: 1024px) {
+  .btn,
+  .form-control,
+  .list-group-item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .btn {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .list-group-item {
+    flex-direction: column;
+    background: #eee;
+  }
+  .list-group-item-success {
+    background: #266575;
+  }
+  .btn-group {
+    align-self: end;
+    background: none;
+  }
+  h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 800px) {
+  .input-group {
+    flex-direction: column;
+  }
 }
